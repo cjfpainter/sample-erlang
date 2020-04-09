@@ -1,0 +1,4 @@
+/deps
+.erlang.mk
+_rel
+ebin
