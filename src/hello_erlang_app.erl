@@ -9,7 +9,13 @@ start(_Type, _Args) ->
     io:fwrite("~s ~s ~s ~s.\n", ["launched", "sample", "Erlang", EV]),
     PORT = list_to_integer(EV),
     Dispatch = cowboy_router:compile([
-        {'_', [{"/", hello_handler, []}]}
+        {'_', [
+               {"/", cowboy_static,
+                {priv_file, hello_erlang, "static/index.html"}
+               },
+               {"/text", hello_handler, []}
+              ]
+        }
     ]),
     {ok, _} = cowboy:start_clear(my_http_listener,
         [{port, PORT}],
