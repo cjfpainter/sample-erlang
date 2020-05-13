@@ -8,6 +8,7 @@ start(_Type, _Args) ->
     EV = os:getenv("PORT", "8080"),
     io:fwrite("~s ~s ~s ~s.\n", ["launched", "sample", "Erlang", EV]),
     PORT = list_to_integer(EV),
+    %% TODO:extend the router for images and JS
     Dispatch = cowboy_router:compile([
         {'_', [
                {"/", cowboy_static,

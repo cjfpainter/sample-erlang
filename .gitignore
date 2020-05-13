@@ -2,3 +2,8 @@
 .erlang.mk
 _rel
 ebin
+erl_crash.dump
+_build/default/lib/hello_erlang/.rebar3/rebar_compiler_erl/source.dag
+_build/default/lib/hello_erlang/include
+_build/default/lib/hello_erlang/priv
+_build/default/lib/hello_erlang/src
