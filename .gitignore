@@ -8,3 +8,4 @@ _build/default/lib/hello_erlang/include
 _build/default/lib/hello_erlang/priv
 _build/default/lib/hello_erlang/src
 .vscode
+rebar.lock
