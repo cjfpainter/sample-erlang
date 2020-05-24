@@ -14,6 +14,7 @@ start(_Type, _Args) ->
                {"/", cowboy_static,
                 {priv_file, hello_erlang, "static/index.html"}
                },
+               {"/assets/[...]", cowboy_static, {priv_dir, hello_erlang, "static/assets"}},
                {"/text", hello_handler, []}
               ]
         }
